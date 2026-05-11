@@ -4,151 +4,184 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Toilets in Japan – Where to Find Bathrooms Quickly</title>
-  <meta name="google-site-verification" content="UxTxkiSW9olB27THPqo3d4Q24FxPwieZ6RpqQKwOa-M" />
   <meta name="description" content="A simple guide to finding toilets in Japan. Learn where to look and how to find bathrooms quickly in cities like Tokyo and Osaka.">
-
-  <meta property="og:title" content="Toilets in Japan – Quick Guide">
-  <meta property="og:description" content="Find out where to locate clean and free toilets in Japan quickly and easily.">
-  <meta property="og:type" content="website">
 
   <style>
     :root {
-      --primary-color: #007aff;
-      --text-main: #2c3e50;
-      --text-muted: #666;
+      --primary-color: #d90429;
+      --secondary-color: #2b2d42;
+      --text-main: #2d3436;
       --bg-light: #f8f9fa;
       --white: #ffffff;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.6;
       color: var(--text-main);
       margin: 0;
-      padding: 0;
       background-color: var(--white);
     }
 
-    /* Layout Containers */
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
-    /* Header & Nav */
+    /* Header */
     header {
-      padding: 40px 0 20px 0;
-      border-bottom: 1px solid #eee;
+      padding: 25px 0;
+      background: white;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 22px;
+      font-weight: 900;
       text-decoration: none;
-      color: var(--text-main);
+      color: var(--secondary-color);
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--primary-color);
     }
 
     /* Hero Section */
     .hero {
-      padding: 60px 0;
-      background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
-      border-bottom: 1px solid #eee;
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      background: #000;
+      color: white;
+      overflow: hidden;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin: 0 0 20px 0;
-      line-height: 1.2;
+    .hero-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
     }
 
-    .hero p {
-      font-size: 18px;
-      color: var(--text-muted);
+    .hero-content {
+      position: relative;
+      z-index: 2;
       max-width: 600px;
     }
 
-    /* Blog Feed */
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin: 0 0 15px 0;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 19px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* Article Grid */
     .section-title {
-      margin: 60px 0 30px 0;
-      font-size: 24px;
-      border-left: 4px solid var(--primary-color);
+      margin: 50px 0 25px 0;
+      font-size: 26px;
+      color: var(--secondary-color);
+      border-left: 5px solid var(--primary-color);
       padding-left: 15px;
     }
 
     .post-card {
-      display: block;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 25px;
       text-decoration: none;
       color: inherit;
-      padding: 24px;
+      padding: 20px;
       margin-bottom: 20px;
-      border-radius: 12px;
+      border-radius: 16px;
       border: 1px solid #eee;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.3s ease;
+      align-items: center;
     }
 
     .post-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
       border-color: var(--primary-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transform: translateY(-3px);
+    }
+
+    .post-thumb {
+      width: 180px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     .post-date {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--primary-color);
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 5px;
     }
 
     .post-card h3 {
-      margin: 10px 0;
+      margin: 0 0 8px 0;
       font-size: 22px;
+      line-height: 1.3;
     }
 
     .post-card p {
       margin: 0;
-      color: var(--text-muted);
+      color: #636e72;
       font-size: 16px;
+      line-height: 1.5;
     }
 
-    /* App Promotion Card */
+    /* App Card - Matching Article Style */
     .app-card {
-      background: #111;
+      background: linear-gradient(145deg, #2b2d42, #1a1a1a);
       color: white;
-      padding: 30px;
-      border-radius: 16px;
-      margin: 40px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 50px 30px;
+      border-radius: 24px;
+      margin: 60px 0;
       text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
-    .app-card h2 { margin-top: 0; }
-    .app-card p { color: #ccc; }
+    .app-card h2 { margin: 0 0 10px 0; font-size: 32px; border: none; }
+    .app-card p { color: #f0f0f0; font-size: 18px; margin-bottom: 25px; }
 
     .btn {
-      background: var(--primary-color);
+      background: #ff002b;
       color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 16px 35px;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: 600;
-      margin-top: 15px;
+      font-weight: 700;
       display: inline-block;
+      transition: 0.2s;
     }
+
+    .btn:hover { transform: scale(1.05); }
 
     footer {
       padding: 60px 0;
       text-align: center;
       font-size: 14px;
-      color: #999;
-      border-top: 1px solid #eee;
+      color: #777;
+      background: var(--bg-light);
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 32px; }
+    /* Mobile */
+    @media (max-width: 650px) {
+      .post-card { grid-template-columns: 1fr; gap: 15px; }
+      .post-thumb { width: 100%; height: 180px; }
+      .hero { height: 300px; }
     }
   </style>
 </head>
@@ -156,17 +189,15 @@
 
   <header>
     <div class="container">
-      <a href="/" class="logo">🚽 JapanToiletGuide</a>
+      <a href="/" class="logo">🚽 Japan<span>Toilet</span>Guide</a>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container">
+    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1200" class="hero-bg" alt="Japan scene">
+    <div class="container hero-content">
       <h1>The ultimate guide to finding relief in Japan.</h1>
-      <p>
-        Whether you are exploring the neon lights of Shinjuku or the temples of Kyoto, 
-        knowing where the nearest clean restroom is can change your trip.
-      </p>
+      <p>Clean restrooms are everywhere — if you know where to look. From Tokyo neon to Kyoto temples, we've got you covered.</p>
     </div>
   </section>
 
@@ -175,33 +206,45 @@
     <h2 class="section-title">Latest Articles</h2>
 
     <a href="toilet-japan.html" class="post-card">
-      <span class="post-date">Essentials</span>
-      <h3>How to find a toilet in Japan</h3>
-      <p>A comprehensive list of places that always have public restrooms, from Konbinis to Depachikas.</p>
+      <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&q=80&w=400" class="post-thumb" alt="Japan shop">
+      <div>
+        <span class="post-date">Essentials</span>
+        <h3>How to find a toilet in Japan</h3>
+        <p>A comprehensive list of places that always have public restrooms, from Konbinis to Depachikas.</p>
+      </div>
     </a>
 
     <a href="japanese-phrases.html" class="post-card">
-      <span class="post-date">Phrases that may help you</span>
-      <h3>How to Ask for a Toilet in Japan (Useful Japanese Phrases)</h3>
-      <p>Not sure how to ask for a toilet in Japan? Learn simple Japanese phrases that can help you find a bathroom quickly, even if you don’t speak the language.</p>
+      <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&q=80&w=400" class="post-thumb" alt="Japanese signs">
+      <div>
+        <span class="post-date">Phrases</span>
+        <h3>How to Ask for a Toilet in Japan</h3>
+        <p>Learn simple Japanese phrases that can help you find a bathroom quickly, even if you don’t speak the language.</p>
+      </div>
     </a>
 
     <a href="toilet-etiquette.html" class="post-card">
-      <span class="post-date">Tips</span>
-      <h3>Toilet Etiquette in Japan (What Tourists Should Know)</h3>
-      <p>ENot sure how toilets work in Japan? Learn the most important etiquette rules, common mistakes, and tips to avoid awkward situations while traveling.</p>
+      <img src="https://images.unsplash.com/photo-1620353106316-29a567639e72?auto=format&fit=crop&q=80&w=400" class="post-thumb" alt="Toilet buttons">
+      <div>
+        <span class="post-date">Etiquette</span>
+        <h3>Toilet Etiquette (Tourist Guide)</h3>
+        <p>Don't panic at the buttons! Learn the rules, common mistakes, and how to use washlets like a local.</p>
+      </div>
     </a>
 
     <a href="free-toilets.html" class="post-card">
-      <span class="post-date">FAQ</span>
-      <h3>Are Toilets Free in Japan?</h3>
-      <p>Good news for travelers: Japan offers a massive network of high-quality free restrooms. Here is where to find them.</p>
+      <img src="https://images.unsplash.com/photo-1590218151300-8809930f36f6?auto=format&fit=crop&q=80&w=400" class="post-thumb" alt="Public station">
+      <div>
+        <span class="post-date">FAQ</span>
+        <h3>Are Toilets Free in Japan?</h3>
+        <p>Good news for travelers: Japan offers a massive network of high-quality free restrooms. Here is where to find them.</p>
+      </div>
     </a>
 
     <!-- App Promotion -->
     <div class="app-card">
       <h2>Sugu Toire (すぐトイレ)</h2>
-      <p>Never search again. See the nearest toilet, distance, and walking time right on your home screen.</p>
+      <p>Never search in a panic again. See the nearest toilet, distance, and walking time right on your home screen.</p>
       <a href="#" class="btn">Get the Android Widget (Coming Soon)</a>
     </div>
 
